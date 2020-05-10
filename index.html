@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		header {
+			background-color: gold;
+			border: 2px solid gold;
+			margin: -8px -8px 0px -8px;
+			padding: 10px 14px 18px 100px;
+			font-family: helvetica;
+		}
+		
+		a {
+			text-decoration: none;
+			color: rgba(0, 0, 145, 1);
+		}
+		
+		.lefty {
+			padding-right: 13px
+		}
+		
+		.very-lefty {
+			padding-right: 400px;
+		}
+		
+		.up {
+			position: relative;
+			bottom: 10px;
+		}
+		
+		#property {
+			border: 1px solid rgba(0, 0, 145, 1);
+			border-radius: 4px;
+			padding: 7px;
+			margin: 10px;
+			position: relative;
+			bottom: 15px;
+		}
+		
+		.normal-left {
+			position: relative;
+			left: 13px;
+		}
+		
+		nav {
+			position: relative;
+			left: 15px;
+		}
+		
+		#lists {
+			position: relative;
+			left: 10px;
+		}
+		
+		#trips {
+			position: relative;
+			left: 17px;
+		}
+		
+		.label {
+			color: rgba(0, 0, 145, 1);
+		}
+		
+		.support {
+			position: relative;
+			left: 20px;
+		}
+		
+		body {
+			background-image: url('Tropical-Background.jpg');
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		
+		footer {
+			background-color: white;
+			padding: 30px;
+			margin: 40px -8px -40px -8px;
+		}
+		
+		#copyright {
+			color: grey;
+			font-family: helvetica;
+			padding: 0px 0px 0px 92px;
+		}
+		
+		#book {
+			background-color: rgba(0, 0, 0, 0.6);
+			border-radius: 5px;
+			margin: 20px 110px 25px 110px;
+			padding: 20px;
+		}
+		
+		.option {
+			background-color: rgba(192, 192, 192, 0.3);
+			border: none;
+			border-radius: 3px;
+			font-family: helvetica;
+			color: white;
+			padding: 7px;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+		.labelling {
+			font-family: helvetica;
+			position: relative;
+			bottom: 4px;
+			color: rgb(192, 192, 192);
+		}
+		
+		.second-label {
+			font-family: helvetica;
+			color: rgb(192, 192, 192);
+			position: relative;
+			bottom: 28px;
+			right: 188px;
+		}
+		
+		.text {
+			border: 1px #616161 solid;
+			padding: 8px;
+			border-radius: 3px;
+		}
+		
+		.text:focus {
+			border: 2px solid lightblue;
+			outline: none;
+		}
+		
+		.return-label {
+			font-family: helvetica;
+			color: rgb(192, 192, 192);
+			position: relative;
+			bottom: 30px;
+			right: 159px;
+		}
+		
+		.search {
+			background-color: gold;
+			border: none;
+			border-radius: 3px;
+			font-family: helvetica;
+			color: black;
+			padding: 16px;
+			text-decoration: none;
+			box-shadow: 0px 2px #BDB76B;
+			outline: none;
+			cursor: pointer;
+		}
+		
+		#Adults {
+			width: 70px;
+			height: 36px;
+			border-radius: 3px;
+			position: relative;
+			right: 130px;
+		}
+		
+		#adult-label {
+			font-family: helvetica;
+			color: rgb(192, 192, 192);
+			position: relative;
+			bottom: 30px;
+			right: 43px;
+		}
+		
+		#Children {
+			width: 70px;
+			height: 36px;
+			border-radius: 3px;
+			position: relative;
+			right: 220px;
+		}
+		
+		#children-label {
+			font-family: helvetica;
+			color: rgb(192, 192, 192);
+			position: relative;
+			bottom: 30px;
+			right: 115px;
+		}
+		
+		#class-label {
+			font-family: helvetica;
+			color: rgb(192, 192, 192);
+			position: relative;
+			bottom: 6px;
+			right: 1px;
+		}
+		
+		#Class {
+			width: 150px;
+			height: 36px;
+			border-radius: 3px;
+		}
+	</style>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Favicom-->
+		<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+		<title>Expedia Clone</title>
+	</head>
+	<body>
+		<header>
+			<!--Logo-->
+			<a href="index.html"><img class="very-lefty" src="logo.svg" alt="Expedia Logo"></a>
+			<!--List Your Property-->
+			<a id="property" href="#">List your property</a>
+			<!--Account-->
+			<label class="up label" for="Account">Account</label>
+			<select class="up" id="Account" name="Account">
+				<option value="sign-in"><a href="#">Sign In</a></option>
+				<option value="create-account">Create Account</option>
+			</select>
+			<!--My List-->
+			<a class="up" id="lists" href="#">My Lists</a>
+			<!--My Trips-->
+			<a class="up" id="trips" href="#">My Trips</a>
+			<!--Support-->
+			<label class="up support label" id="support" for="Support">Support</label>
+			<a class="up support" href="#">
+				<select id="Support" name="Support">
+					<option value="Customer Support">Customer Support</option>
+					<option value="Feedback">Feedback</option>
+				</select>
+			</a>
+			<!--Nav Links-->
+			<nav>
+				<a class="lefty" href="#">Flights</a>
+				<a class="lefty" href="#">Hotels</a>
+				<a class="lefty" href="#">Bundle and Save</a>
+				<a class="lefty" href="#">Cars</a>
+				<a class="lefty" href="#">Cruises</a>
+				<a class="lefty" href="#">Things to Do</a>
+				<a class="lefty" href="#">Deals</a>
+				<a class="lefty" href="#">Rewards</a>
+				<a class="lefty" href="#">Mobile</a>
+			</nav>
+		</header>
+		<!--Booking-->
+		<div id="book">
+			<button class="option">Flights</button>
+			<button class="option">Hotels</button>
+			<button class="option">Bundle and Save</button>
+			<button class="option">Cars</button>
+			<button class="option">Cruises</button>
+			<button class="option">Things to Do</button>
+			<button class="option">Vacation Rentals</button>
+			<br><br>
+			<!--One Way, Round Trip, Multi-City-->
+			<button class="option">One Way</button><button class="option">Round Trip</button><button class="option">Multi-City</button>
+			<br><br>
+			<!--Airport-->
+			<label class="labelling" for="flying-from">Flying From</label><br>
+			<input class="text" id="flying-from" name="flying-from" type="text" placeholder="City or Airport Code" required>
+			<input class="text" id="flying-to" name="flying-to" placeholder="City or Airport Code" type="text" required>
+			<label class="second-label" for="flying-to">Flying To</label><br><br>
+			<!--Airport-->
+			<!--Dates-->
+			<label class="labelling" for="departure-date">Departing</label><br>
+			<input class="text" id="departure-date" name="departure-date" type="date" required>
+			<input class="text" id="return-date" name="return-date" type="date" required>
+			<label class="return-label" for="return-date">Return</label>
+			<!--Dates-->
+			<!--Age-->
+			<label id="adult-label" for="Adults">Adults(18+)</label>
+			<select id="Adults">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<label id="children-label" for="Children">Children(0-17)</label>
+			<select id="Children">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+			<br><br>
+			<label id="class-label" for="Class">Preferred Class</label><br>
+			<select id="Class">
+				<option value="Economy">Economy/Coach</option>
+				<option value="Premium Economy">Premium</option>
+				<option value="Business">Business</option>
+				<option value="First">First</option>
+			</select>
+			<br><br><br>
+			<a href="personal-information.html"><button style="font-size:16px;" class="search">Search</button></a>
+		</div>
+		<footer>
+			<span id="copyright">Expedia, Inc. is not responsible for content on external Web sites. © 2020 Expedia, Inc, an Expedia Group Company. All rights reserved.</span>
+			<br><br>
+			<center><img src="Expedia-Group.svg" alt="Expedia Group Logo"></center>
+		</footer>
+	</body>
+</html>

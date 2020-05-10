@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		header {
+			background-color: gold;
+			border: 2px solid gold;
+			margin: -8px -8px 0px -8px;
+			padding: 10px 14px 3px 100px;
+			font-family: helvetica;
+		}
+		
+		body {
+			background-color: rgba(192, 192, 192, 0.19);
+		}
+		
+		#secure {
+			font-family: helvetica;
+			color: rgba(0, 0, 106, 0.85);
+			font-size: 28px;
+			position: relative;
+			left: 90px;
+			bottom: 7px;
+		}
+		
+		article {
+			background-color: white;
+			font-family: helvetica;
+			margin: 0px 500px 0px 90px;
+			padding: 1px 18px 18px 18px;
+			border-radius: 2px;
+			box-shadow: 0px 2px rgba(192, 192, 192, 0.19);
+		}
+		
+		#traveller {
+			color: #616161;
+			margin: -18px 0px 0px 0px;
+		}
+		
+		label {
+			color: #616161;
+			font-family: helvetica;
+			font-weight: 700;
+		}
+		
+		#fname-label {
+			position: relative;
+			bottom: 6px;
+			font-weight: 700;
+			font-family: helvetica;
+			color: #616161
+		}
+		
+		#mname-label {
+			position: relative;
+			bottom: 30px;
+			right: 202px;
+			font-weight: 700;
+			font-family: helvetica;
+			color: #616161
+		}
+		
+		.text, input {
+			border: 1px #616161 solid;
+			padding: 8px;
+			border-radius: 3px;
+			margin-right: 10px;
+			color: rgba(0, 0, 106, 0.85);
+		}
+		
+		#lname {
+			position: relative;
+			left: 400px;
+			bottom: 33px;
+		}
+		
+		#lname-label {
+			position: relative;
+			bottom: 64px;
+			left: 200px;
+			font-weight: 700;
+			font-family: helvetica;
+			color: #616161
+		}
+		
+		#country-code-label {
+			position: relative;
+			bottom: 20px;
+		}
+		
+		#country-code {
+			width: 50%;
+			height: 36px;
+			border-radius: 3px;
+			background-color: rgba(192, 192, 192, 0.19);
+			font-family: helvetica;
+			font-size: 13px;
+			margin-top: -16px;
+			margin-bottom: 16px;
+		}
+		
+		#phone-number {
+			margin-top: 7px;
+			width: 30%
+		}
+		
+		#receive-label {font-size: 14px;}
+		
+		#gender {
+			color: #616161;
+			font-weight: 700;
+		}
+		
+		#date-of-birth {margin-top: 9px;}
+		
+		p {
+			font-family: helvetica;
+			color: #616161;
+		}
+		
+		#card-type {
+			width: 20%;
+			height: 36px;
+			border-radius: 3px;
+			background-color: rgba(192, 192, 192, 0.19);
+			font-family: helvetica;
+			font-size: 13px;
+			margin-top: -16px;
+			margin-bottom: 16px;
+		}
+		
+		#country-territory {
+			width: 50%;
+			height: 36px;
+			border-radius: 3px;
+			background-color: rgba(192, 192, 192, 0.19);
+			font-family: helvetica;
+			font-size: 13px;
+			margin-top: 10px;
+		}
+		
+		#state {
+			width: 20%;
+			height: 36px;
+			border-radius: 3px;
+			background-color: rgba(192, 192, 192, 0.19);
+			font-family: helvetica;
+			font-size: 13px;
+			margin-top: 10px;
+		}
+		
+		#complete-booking {
+			background-color: gold;
+			border: none;
+			border-radius: 3px;
+			font-family: helvetica;
+			color: black;
+			padding: 16px;
+			text-decoration: none;
+			box-shadow: 0px 2px #BDB76B;
+			outline: none;
+			cursor: pointer;
+		}
+	</style>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Favicom-->
+		<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+		<title>Expedia Clone</title>
+	</head>
+	<body>
+		<header>
+			<!--Logo-->
+			<a href="index.html"><img src="logo.svg" alt="Expedia Logo"></a>
+		</header>
+		<h1 id="secure">Secure booking - only takes a few minutes!</h1>
+		<article>
+			<h2>Who's travelling?</h2>
+			<p id="traveller">Traveler names must match government-issued photo ID exactly.</p><br>
+			<!--First Name-->
+			<label id="fname-label" for="fname">First Name</label><br>
+			<input class="text" id="fname" type="text" name="fname" required>
+			<!--First Name-->
+			<!--Middle Name-->
+			<input id="mname" type="text" class="text" name="fname" required>
+			<label id="mname-label" for="mname">Middle Name (optional)</label>
+			<!--Middle Name-->
+			<!--Last Name-->
+			<input id="lname" type="text" class="text" name="fname" required>
+			<label id="lname-label" for="lname">Last Name</label><br>
+			<!--Last Name-->
+			<label id="country-code-label" for="country-code">Country/Territory Code</label><br>
+			<!--Country Telephone Code-->
+			<select id="country-code">
+				<option value="1">United States of America +1</option>
+				<option value="1">Canada +1</option>
+				<option value="44">United Kingdom +44</option>
+				<option value="1">Jamaica +1</option>
+				<option value="61">Australia +61</option>
+				<option value="64">New Zealand +64</option>
+			</select><br>
+			<!--Phone Number-->
+			<label for="phone-number">Phone Number</label><br>
+			<input type="tel" id="phone-number" class="text" name="phone-number" placeholder="In case we need to reach you" required><br><br>
+			<!--Receive text alerts-->
+			<input id="receive" type="checkbox" name="receive">
+			<label id="receive-label" for="receive">Receive text alerts about this trip. Message and data rates may apply.</label><br>
+			<!--Gender-->
+			<p id="gender">Gender</p>
+			<input id="male" type="radio" value="Male" name="male" required>
+			<label for="male">Male</label>
+			<input type="radio" id="female" value="Female" name="female" required>
+			<label for="female">Female</label><br><br>
+			<!--Date of Birth-->
+			<label for="date-of-birth">Date of Birth</label><br>
+			<input class="text" type="date" id="date-of-birth" name="date-of-birth">
+			<p>Seat Selection</p>
+			<p>Your specific seat will be assigned by the airline before your flight.</p>
+		</article>
+		<br>
+		<article>
+		<!--Credit/Debit Card Information-->
+			<h2>How would you like to pay?</h2>
+			<select id="card-type">
+				<option value="Visa">Visa</option>
+				<option value="Mastercard">Mastercard</option>
+				<option value="American Express">American Express</option>
+				<option value="Discover">Discover</option>
+				<option value="JCB">JCB</option>
+				<option value="Diner's Club">Diner's Club</option>
+			</select><br><br>
+			<!--Name on Card-->
+			<label for="name-on-card">Name on Card</label><br>
+			<input style="margin-top:10px; width:50%" id="name-on-card" type="text" name="name-on-card" required><br><br>
+			<!--Card Number-->
+			<label for="card-number">Credit/Debit Card Number</label><br>
+			<input id="card-number" name="card-number" style="margin-top:10px;" type="text" required><br><br>
+			<!--Expiration Date-->
+			<label for="expiration--date">Expiriation Date</label><br>
+			<input style="margin-top:10px;" id="expiration-date" name="expiration-date" type="date" required><br><br>
+			<!--Security Code-->
+			<label for="security-code">3-Digit Security Code</label><br>
+			<input style="margin-top:10px; width:5%" id="security-code" name="security-code" type="text" required><br>
+			<br>
+			<hr>
+			<br>
+			<!--Country/Territory-->
+			<label for="country-territory">Country/Territory</label><br>
+			<select id="country-territory" name="country/territory" required>
+				<option value="United States of America">United States of America</option>
+				<option value="Canada">Canada</option>
+				<option value="Jamaica">Jamaica</option>
+				<option value="United Kingdom">United Kingdom</option>
+				<option value="Australia">Australia</option>
+				<option value="New Zealand">New Zealand</option>
+			</select><br><br>
+			<!--Billing Address-->
+			<label for="billing-address-1">Billing Address 1</label><br>
+			<input style="margin-top:10px; width:50%" id="billing-address-1" name="billing-address-1" type="text" placeholder="(ex. 123 Main)" required><br><br>
+			<label for="billing-address-2">Billing Address 2</label><br>
+			<input style="margin-top:10px; width:50%;" id="billing-address-2" name="billing-address-2" placeholder="(ex. Suite 400, Apt. 4B)" type="text"><br><br>
+			<!--City-->
+			<label for="city">City</label><br>
+			<input style="margin-top:10px;" id="city" name="city" required><br><br>
+			<!--State-->
+			<label for="state">State</label><br>
+			<select id="state" name="state" required>
+				<option>Alaska</option>
+				<option>Alabama</option>
+				<option>Arkansas</option>
+				<option>California</option>
+				<option>Florida</option>
+				<option>Georgia</option>
+				<option>New York</option>
+				<option>New Hempshire</option>
+				<option>Nevada</option>
+				<option>Washington</option>
+			</select><br><br>
+			<!--ZIP Code-->
+			<label for="zip-code">ZIP Code</label><br>
+			<input style="margin-top:10px;" id="zip-code" name="zip-code" type="text" required>
+		</article>
+		<br>
+		<article>
+			<h2>Where should we send you're confirmation?</h2>
+			<p>Please enter the email address where you would like to receive your confirmation.</p>
+			<label for="e-mail">Email Address</label><br>
+			<input style="margin-top:10px; width:50%" id="e-mail" name="e-mail" type="text" required>
+		</article>
+		<br>
+		<article>
+			<h2>Review and book your trip</h2>
+			<p>1. Review your trip details to make sure the dates and times are correct.</p>
+			<p>2. Check your spelling. Flight passenger names must match government-issued photo ID exactly.</p>
+			<p>3. Review the terms of your booking:</p>
+			<a href="complete-booking.html"><button style="font-size:16px;" id="complete-booking">Complete Booking</button></a>
+		</article>
+	</body>
+</html>
