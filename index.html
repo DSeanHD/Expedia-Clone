@@ -74,7 +74,10 @@
 		footer {
 			background-color: white;
 			padding: 30px;
-			margin: 40px -8px -40px -8px;
+			position: absolute;
+			margin-top: 200px;
+			right: 0;
+			left: 0;
 		}
 		
 		#copyright {
@@ -101,6 +104,21 @@
 			cursor: pointer;
 		}
 		
+		.one-way {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+
+		.round-trip {
+			border-radius: 0;
+		}
+
+		.multi-city {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
 		.labelling {
 			font-family: helvetica;
 			position: relative;
@@ -193,11 +211,70 @@
 			height: 36px;
 			border-radius: 3px;
 		}
+		
+		@media only screen and (max-width: 375px) {
+			#copyright {
+				text-align: center;
+			}
+			
+			header {
+				margin: -10px -300px 0px -20px;
+			}
+			
+			footer {
+				margin: 0px -300px 0px -20px;
+				padding-bottom: 140px;
+			}
+			
+			#book {
+				padding-right: 400px;
+			}
+			
+			#support {
+				position: relative;
+				top: 24px;
+			}
+			
+			#Support {
+				position: relative;
+				left: 400px;
+				margin: 15px;
+			}
+			
+			#Account {
+				position: relative;
+				top: 25px;
+				left: 3px;
+			}
+			
+			#account-label {
+				position: relative;
+				top: 25px;
+				left: 0px;
+			}
+			
+			#property {
+				position: relative;
+				top: 25px;
+				right: 20px;
+			}
+			
+			#search-button {
+				text-align: center;
+			}
+			
+			#lists {
+				margin-left: -120px;
+			}
+			
+			
+		}
+		
 	</style>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--Favicom-->
+		<!--Favicon-->
 		<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 		<title>Expedia Clone</title>
 	</head>
@@ -208,7 +285,7 @@
 			<!--List Your Property-->
 			<a id="property" href="#">List your property</a>
 			<!--Account-->
-			<label class="up label" for="Account">Account</label>
+			<label class="up label" id="account-label" for="Account">Account</label>
 			<select class="up" id="Account" name="Account">
 				<option value="sign-in"><a href="#">Sign In</a></option>
 				<option value="create-account">Create Account</option>
@@ -249,7 +326,7 @@
 			<button class="option">Vacation Rentals</button>
 			<br><br>
 			<!--One Way, Round Trip, Multi-City-->
-			<button class="option">One Way</button><button class="option">Round Trip</button><button class="option">Multi-City</button>
+			<button class="option one-way">One Way</button><button class="option round-trip">Round Trip</button><button class="option multi-city">Multi-City</button>
 			<br><br>
 			<!--Airport-->
 			<label class="labelling" for="flying-from">Flying From</label><br>
@@ -292,10 +369,10 @@
 				<option value="First">First</option>
 			</select>
 			<br><br><br>
-			<a href="personal-information.html"><button style="font-size:16px;" class="search">Search</button></a>
+			<a href="personal-information.html"><button id="search-button" style="font-size:16px;" class="search" required>Search</button></a>
 		</div>
 		<footer>
-			<span id="copyright">Expedia, Inc. is not responsible for content on external Web sites. © 2020 Expedia, Inc, an Expedia Group Company. All rights reserved.</span>
+			<center><span id="copyright">Expedia, Inc. is not responsible for content on external Web sites. © 2020 Expedia, Inc, an Expedia Group Company. All rights reserved.</span></center>
 			<br><br>
 			<center><img src="Expedia-Group.svg" alt="Expedia Group Logo"></center>
 		</footer>
